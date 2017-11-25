@@ -18,8 +18,11 @@ button.huone {
 function update(i,rgb) {
 	console.log(i);
 	console.log(rgb);
-	$.get("/led/"+i+"/color?r="+rgb[0]+"&g="+rgb[0]+"&b="+rgb[0]);
+	var url = "/led/"+i+"/color?r="+Math.round(rgb[0])+"&g="+Math.round(rgb[1])+"&b="+Math.round(rgb[2]) ;
+        console.log(url);
+	$.get(url);
 }
+
 $(document).ready(function(){
 	console.log("init");
 	var i;
@@ -33,12 +36,12 @@ $(document).ready(function(){
 </head>
 
 <body>
-<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff',onFineChange:'update(0, this.rgb)'}" id="huone1"> </button>
-<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone2"> </button>
-<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone3"> </button>
-<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone4"> </button>
-<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone5"> </button>
-<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone6"> </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff',onFineChange:'update(5, this.rgb)'}" > </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff',onFineChange:'update(4, this.rgb)'}" > </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff',onFineChange:'update(2, this.rgb)'}" > </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff',onFineChange:'update(3, this.rgb)'}" > </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff',onFineChange:'update(1, this.rgb)'}" > </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff',onFineChange:'update(0, this.rgb)'}" > </button>
 </body>
 
 </html>
