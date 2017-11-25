@@ -15,18 +15,25 @@ button.huone {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
 
 <script>
+function update(i,rgb) {
+	console.log(i);
+	console.log(rgb);
+	$.get("/led/"+i+"/color?r="+rgb[0]+"&g="+rgb[0]+"&b="+rgb[0]);
+}
 $(document).ready(function(){
+	console.log("init");
 	var i;
 	for (i=0;i<6;i++){
 		$('.huone')[i].jscolor.fromRGB(0, 0, 0);
 	}
+	
 });
 </script>
 
 </head>
 
 <body>
-<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone1"> </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff',onFineChange:'update(0, this.rgb)'}" id="huone1"> </button>
 <button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone2"> </button>
 <button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone3"> </button>
 <button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone4"> </button>
