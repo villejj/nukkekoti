@@ -1,0 +1,37 @@
+<html>
+<head>
+
+<style>
+button.huone {
+    background-color: red;
+	height: 25%;
+    width: 45%;
+    float: left;
+	margin: 1%;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	var i;
+	for (i=0;i<6;i++){
+		$('.huone')[i].jscolor.fromRGB(0, 0, 0);
+	}
+});
+</script>
+
+</head>
+
+<body>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone1"> </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone2"> </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone3"> </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone4"> </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone5"> </button>
+<button class="huone jscolor {width:700, height:300, valueElement:null,value:'66ccff'}" id="huone6"> </button>
+</body>
+
+</html>
