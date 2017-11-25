@@ -2,7 +2,7 @@
 <head>
 
 <style>
-div.huone {
+button.huone {
     background-color: red;
 	height: 25%;
     width: 45%;
@@ -11,15 +11,27 @@ div.huone {
 }
 </style>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	var i;
+	for (i=0;i<6;i++){
+		$('.huone')[i].jscolor.fromRGB(0, 0, 0);
+	}
+});
+</script>
+
 </head>
 
 <body>
-<div class="huone" id="huone1">a </div>
-<div class="huone" id="huone2"> b</div>
-<div class="huone" id="huone3"> c</div>
-<div class="huone" id="huone4"> </div>
-<div class="huone" id="huone5"> </div>
-<div class="huone" id="huone5"> </div>
+<button class="huone jscolor {valueElement:null,value:'66ccff'}" id="huone1"> </button>
+<button class="huone jscolor {valueElement:null,value:'66ccff'}" id="huone2"> </button>
+<button class="huone jscolor {valueElement:null,value:'66ccff'}" id="huone3"> </button>
+<button class="huone jscolor {valueElement:null,value:'66ccff'}" id="huone4"> </button>
+<button class="huone jscolor {valueElement:null,value:'66ccff'}" id="huone5"> </button>
+<button class="huone jscolor {valueElement:null,value:'66ccff'}" id="huone6"> </button>
 </body>
 
 </html>
